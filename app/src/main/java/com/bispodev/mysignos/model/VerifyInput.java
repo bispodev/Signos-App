@@ -9,6 +9,11 @@ public class VerifyInput {
     ArrayList<Integer> month30 = new ArrayList<>();
     ArrayList<Integer> month31 = new ArrayList<>();
 
+    public VerifyInput(){
+        fillMonth30();
+        fillMonth31();
+    }
+
     public void fillMonth30(){
         for (int i = 1; i <= 30; i++){
             if(i%2 == 0){
@@ -26,7 +31,7 @@ public class VerifyInput {
     }
 
     public boolean verify(int day, int month){
-        int typeMonth;
+        int typeMonth = 0;
 
         if(month == 2){
             typeMonth = 2;
@@ -35,7 +40,17 @@ public class VerifyInput {
        }else if(month31.equals(month)){
            typeMonth = 31;
        }
-        return false;
 
+        switch (typeMonth){
+            case 2:
+                return day >= 1 && day <= 29;
+            case 30:
+                return day >= 1 && day <= 30;
+            case 31:
+                return day >= 1 && day <= 31;
+            default:
+                return false;
+        }
    }
+
 }
