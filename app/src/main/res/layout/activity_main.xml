@@ -6,11 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Day"
+        android:src="@drawable/logo"
+        />
+
     <TextView
         android:id="@+id/tv_Day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/DayBirth"
+        android:text="@string/day_birth"
         android:textSize="18sp"
         android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,6 +36,7 @@
         android:id="@+id/sn_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/tv_Day"
         app:layout_constraintRight_toRightOf="parent"
@@ -35,7 +48,7 @@
         android:id="@+id/tv_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/MonthBirth"
+        android:text="@string/month_birth"
         android:textSize="18sp"
         android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +72,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ToDiscover"
+        android:text="@string/to_discover"
         app:layout_constraintTop_toBottomOf="@+id/tv_month"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
